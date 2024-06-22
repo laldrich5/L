@@ -40,7 +40,15 @@ function setOption() {
 
 function respond(){
     speechSynthesis.speak(utterance);
+
+  if (window.addEventListener("keydown", stop) = true){
+    speechSynthesis.cancel();
   }
+  }
+
+function stop(){
+  speechSynthesis.cancel();
+}
 
 speechSynthesis.addEventListener("voiceschanged", populateVoices);
 voicesDropdown.addEventListener("change", setVoice);
